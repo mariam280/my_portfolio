@@ -5,4 +5,5 @@ import 'package:flutter/widgets.dart';
   static const pink = Color(0xffF472B6);
   static const kWhite = Color(0xffF9FAFB);
   static const kGrey = Color(0xff9CA3AF);
+  static const kBlack = Color(0xff0C0C0C);
 }
