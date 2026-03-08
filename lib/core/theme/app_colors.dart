@@ -6,4 +6,5 @@ import 'package:flutter/widgets.dart';
   static const kWhite = Color(0xffF9FAFB);
   static const kGrey = Color(0xff9CA3AF);
   static const kBlack = Color(0xff0C0C0C);
+  static const backgroundColor = Color(0xff0A0A0A);
 }
