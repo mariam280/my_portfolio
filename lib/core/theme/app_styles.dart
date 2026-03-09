@@ -9,7 +9,7 @@ static TextStyle styleBold72(BuildContext context) {
     fontFamily: 'Inter',
     fontWeight: FontWeight.w700,
     height: 1.0, 
-    letterSpacing: -1.8, 
+    letterSpacing: 1.3, 
   );
 }
 
