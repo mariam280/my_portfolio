@@ -27,7 +27,7 @@ class HeroSectionBody extends StatelessWidget {
           ).copyWith(fontSize: 30),
         ),
         Text(
-          "I’m a Computer Science student and Flutter developer passionate about building functional and visually appealing mobile apps. with over one years of hands on experience in cross platform development using Flutter. I combine creativity with problem-solving to deliver impactful solutions. I focus on creating apps with clean UI and smooth user experience tailored to client’s goals",
+          "Flutter Developer focused on helping clients turn their ideas into reliable and user-friendly mobile applications. I care about understanding the problem first, then building solutions that deliver real value.",
           style: AppStyles.styleMedium16Grey(
             context,
           ).copyWith(fontSize: 18),

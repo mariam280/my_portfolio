@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:my_portfolio/core/constants/app_images.dart';
 import 'package:my_portfolio/core/theme/app_colors.dart';
 import 'package:my_portfolio/core/theme/app_styles.dart';
-import 'package:my_portfolio/modules/home/presentation/screens/widgets/div.dart';
+import 'package:my_portfolio/modules/home/presentation/screens/widgets/hero_section/div.dart';
 import 'hero_section_body.dart';
 
 class HeroSection extends StatelessWidget {

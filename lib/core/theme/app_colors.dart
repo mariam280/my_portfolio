@@ -11,4 +11,5 @@ class AppColors {
   static const borderPurple = Color(0xff492768);
   static const borderPink = Color(0xff5E3151);
   static const opacityPink = Color(0xff1D1525);
+  static const cardColor = Color(0xff100F10);
 }

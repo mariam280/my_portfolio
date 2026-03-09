@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/core/theme/app_colors.dart';
 import 'package:my_portfolio/core/widgets/adaptive_layout_widget.dart';
-import 'package:my_portfolio/modules/home/presentation/screens/widgets/app_drawer.dart';
+import 'package:my_portfolio/modules/home/presentation/screens/widgets/hero_section/app_drawer.dart';
 
 import 'widgets/mobile_layout.dart';
 import 'widgets/tablet_layout.dart';
