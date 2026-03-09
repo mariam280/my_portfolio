@@ -1,5 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:my_portfolio/modules/home/presentation/screens/widgets/hero_section/hero_section.dart';
+import 'package:my_portfolio/modules/home/presentation/screens/widgets/skills_section/skills_section.dart';
 
 import 'about_section/about_section.dart';
 
@@ -16,6 +17,7 @@ class TabletLayout extends StatelessWidget {
           children: [
             HeroSection(),
             AboutSection(),
+            SkillsSection(),
           ],
         ),
       ),

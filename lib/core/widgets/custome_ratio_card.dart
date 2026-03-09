@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:my_portfolio/core/theme/app_colors.dart';
 
 class CustomRatioCard extends StatelessWidget {
-  const CustomRatioCard({super.key, required this.aspectRatio, this.child, this.cardColor, this.elevation, this.borderRadius});
+  const CustomRatioCard({super.key, required this.aspectRatio, this.child, this.cardColor, this.elevation, this.borderRadius, this.borderColor});
   final double aspectRatio;
   final Widget? child;
-  final Color? cardColor;
+  final Color? cardColor, borderColor;
   final double? elevation;
   final double? borderRadius ;
   @override
@@ -17,6 +17,7 @@ class CustomRatioCard extends StatelessWidget {
         elevation: elevation ?? 8, // درجة الظل
         shadowColor: AppColors.kGrey.withValues(alpha: 0.3),
        shape: RoundedRectangleBorder(
+        side: BorderSide(color: borderColor ?? AppColors.borderPink),
         borderRadius: BorderRadius.circular(borderRadius ?? 24),),
         child: child,
       ),

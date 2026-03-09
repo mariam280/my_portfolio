@@ -7,32 +7,32 @@ class Assets {
   static const String imagesApiSkill = "assets/images/api_skill.png";
 
   /// Assets for imagesApiSkillSvg
-  /// assets/images/api_skill_svg.png
-  static const String imagesApiSkillSvg = "assets/images/api_skill_svg.png";
+  /// assets/images/api_skill_svg.svg
+  static const String imagesApiSkillSvg = "assets/images/api_skill_svg.svg";
+
+  /// Assets for imagesAqlSkillSvg
+  /// assets/images/aql_skill_svg.svg
+  static const String imagesAqlSkillSvg = "assets/images/aql_skill_svg.svg";
 
   /// Assets for imagesAvatar
   /// assets/images/avatar.png
   static const String imagesAvatar = "assets/images/avatar.png";
 
-  /// Assets for imagesBlicSkillSvg
-  /// assets/images/blic_skill_svg.png
-  static const String imagesBlicSkillSvg = "assets/images/blic_skill_svg.png";
-
   /// Assets for imagesBlocSkill
   /// assets/images/bloc_skill.png
   static const String imagesBlocSkill = "assets/images/bloc_skill.png";
+
+  /// Assets for imagesBlocSkillSvg
+  /// assets/images/bloc_skill_svg.svg
+  static const String imagesBlocSkillSvg = "assets/images/bloc_skill_svg.svg";
 
   /// Assets for imagesDartSkill
   /// assets/images/dart_skill.png
   static const String imagesDartSkill = "assets/images/dart_skill.png";
 
   /// Assets for imagesDartSkillSvg
-  /// assets/images/dart_skill_svg.png
-  static const String imagesDartSkillSvg = "assets/images/dart_skill_svg.png";
-
-  /// Assets for imagesDatabaseSkillSvg
-  /// assets/images/Database_skill_svg.png
-  static const String imagesDatabaseSkillSvg = "assets/images/Database_skill_svg.png";
+  /// assets/images/dart_skill_svg.svg
+  static const String imagesDartSkillSvg = "assets/images/dart_skill_svg.svg";
 
   /// Assets for imagesDivAbout
   /// assets/images/div_about.png
@@ -54,6 +54,10 @@ class Assets {
   /// assets/images/firebase_skill.png
   static const String imagesFirebaseSkill = "assets/images/firebase_skill.png";
 
+  /// Assets for imagesFirebaseSkillSvg
+  /// assets/images/firebase_skill_svg.svg
+  static const String imagesFirebaseSkillSvg = "assets/images/firebase_skill_svg.svg";
+
   /// Assets for imagesFlutterSkill
   /// assets/images/flutter_skill.png
   static const String imagesFlutterSkill = "assets/images/flutter_skill.png";
@@ -67,8 +71,8 @@ class Assets {
   static const String imagesGitSkill = "assets/images/git_skill.png";
 
   /// Assets for imagesGitSkillSvg
-  /// assets/images/git_skill_svg.png
-  static const String imagesGitSkillSvg = "assets/images/git_skill_svg.png";
+  /// assets/images/git_skill_svg.svg
+  static const String imagesGitSkillSvg = "assets/images/git_skill_svg.svg";
 
   /// Assets for imagesGithubIcon
   /// assets/images/Github_icon.png
@@ -101,9 +105,5 @@ class Assets {
   /// Assets for imagesSqlSkill
   /// assets/images/sql_skill.png
   static const String imagesSqlSkill = "assets/images/sql_skill.png";
-
-  /// Assets for imagesSqlSkillSvg
-  /// assets/images/sql_skill_svg.png
-  static const String imagesSqlSkillSvg = "assets/images/sql_skill_svg.png";
 }
 
