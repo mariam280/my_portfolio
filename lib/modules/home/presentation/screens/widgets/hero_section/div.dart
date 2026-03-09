@@ -13,24 +13,27 @@ class Div extends StatelessWidget {
   final TextStyle textStyle;
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 16.80),
-      decoration: ShapeDecoration(
-        color: backgorundColor,
-        shape: RoundedRectangleBorder(
-          side: BorderSide(width: 0.80, color: borderColor),
-          borderRadius: BorderRadius.circular(26843500),
-        ), //************************ */
-        shadows: [
-          BoxShadow(
-            color: Color(0x26A855F7),
-            blurRadius: 15,
-            offset: Offset(0, 0),
-            spreadRadius: 0,
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 2.0),
+      child: Container(
+        padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 10),
+        decoration: ShapeDecoration(
+          color: backgorundColor,
+          shape: RoundedRectangleBorder(
+            side: BorderSide(width: 0.80, color: borderColor),
+            borderRadius: BorderRadius.circular(20),
           ),
-        ],
+          shadows: [
+            BoxShadow(
+              color: Color(0x26A855F7),
+              blurRadius: 15,
+              offset: Offset(0, 0),
+              spreadRadius: 0,
+            ),
+          ],
+        ),
+        child: Text(text, style: textStyle),
       ),
-      child: Text(text, style: textStyle),
     );
   }
 }

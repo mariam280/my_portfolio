@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/core/theme/app_colors.dart';
+import 'package:my_portfolio/core/theme/app_styles.dart';
 
 class CustomGradientButton extends StatelessWidget {
   const CustomGradientButton({
@@ -7,13 +8,16 @@ class CustomGradientButton extends StatelessWidget {
     this.onTap,
     required this.text,
     this.textColor,
-    this.icon, this.image,
+    this.icon,
+    this.image,
+    this.height,
   });
   final VoidCallback? onTap;
   final String text;
   final Color? textColor;
   final IconData? icon;
   final String? image;
+  final double? height;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -27,18 +31,17 @@ class CustomGradientButton extends StatelessWidget {
           ),
           borderRadius: BorderRadius.circular(14),
         ),
-        height: 56,
+        height: height ?? 56,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           spacing: 8,
           children: [
-           if (image != null) Image.asset(image!, fit: BoxFit.contain),
-            Text(
-              text,
-              style: TextStyle(
-                color: textColor,
-                fontSize: 14,
-                fontWeight: FontWeight.bold,
+            if (image != null) Image.asset(image!, fit: BoxFit.contain),
+            FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Text(
+                text,
+                style:  AppStyles.styleMedium16White(context).copyWith(fontSize: 14)
               ),
             ),
             Icon(icon, color: textColor, size: 16),

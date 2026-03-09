@@ -1,96 +1,116 @@
-// import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
+import 'package:my_portfolio/core/theme/app_colors.dart';
+import 'package:my_portfolio/core/widgets/custom_card.dart';
+import 'package:my_portfolio/modules/home/data/models/project_model.dart';
+import 'package:my_portfolio/modules/home/presentation/screens/widgets/projects_section/project_info.dart';
+import 'package:my_portfolio/modules/home/presentation/screens/widgets/projects_section/project_section_footer.dart';
 
-// class FeaturedNftCardItem extends StatelessWidget {
-//   const FeaturedNftCardItem(
-//       {super.key,
-//       required this.height,
-//       required this.featuredNftModel,
-//       this.onTap,
-//       required this.aspectRatio});
-//   final double height;
-//   final VoidCallback? onTap;
-//   final FeaturedNftModel featuredNftModel;
-//   final double aspectRatio;
-//   @override
-//   Widget build(BuildContext context) {
-//     return CustomCard(
-//       aspectRatio: aspectRatio,
-//       //aspectRatio: 321 / 362,
-//       child: Padding(
-//         padding: const EdgeInsets.all(12),
-//         child: Column(
-//           spacing: 4,
-//           mainAxisAlignment: MainAxisAlignment.start, // center
-//           crossAxisAlignment: CrossAxisAlignment.start,
-//           children: [
-//             AspectRatio(
-//               aspectRatio: height,
-//               child: ClipRRect(
-//                 borderRadius: BorderRadius.all(Radius.circular(12)),
-//                 child: Image(
-//                   image: AssetImage(featuredNftModel.image),
-//                   fit: BoxFit.fill,
-//                   //  height: height,
-//                   //  width: double.infinity,
-//                 ),
-//               ),
-//             ),
-//             FittedBox(
-//               fit: BoxFit.scaleDown,
-//               child: Text(
-//                 featuredNftModel.title,
-//                 style: AppStyles.styleBold21(context),
-//               ),
-//             ),
-//             Row(
-//               children: [
-//                 Image.asset(
-//                   Assets.imagesProfiles,
-//                   fit: BoxFit.contain,
-//                 ),
-//                 Flexible(
-//                   child: Text(
-//                     // ' @${featuredNftModel.creator1}',
-//                     ' @${featuredNftModel.creator1} , @${featuredNftModel.creator2}',
-//                     style: AppStyles.styleRegular12(context),
-//                   ),
-//                 ),
-//               ],
-//             ),
-//             Divider(
-//               indent: 3,
-//               endIndent: 3,
-//               color: ColorsManager.nuteralColor3,
-//             ),
-//             Text(
-//               'Current Bid :',
-//               style: AppStyles.styleRegular12(context)
-//                   .copyWith(color: ColorsManager.nuteralColor2),
-//             ),
-//             Row(
-//               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-//               children: [
-//                 Image.asset(
-//                   Assets.imagesCurrencyEthereum,
-//                   fit: BoxFit.contain,
-//                 ),
-//                 Text('  ${featuredNftModel.currentBid}',
-//                     style: AppStyles.styleRegular12(context)),
-//                 // Spacer(),
-//                 Expanded(
-//                   child: CustomButon(
-//                     text: 'Place a Bid',
-//                     buttonColor: ColorsManager.purpleColor1,
-//                     textColor: ColorsManager.kWhite,
-//                     onTap: onTap,
-//                     margin: EdgeInsets.symmetric(horizontal: 10),
-//                   ),
-//                 ),
-//               ],
-//             ),
-//           ],
-//         ),
-//       ),
-//     );
-//   }
-// }
+class ProjectItem extends StatelessWidget {
+  const ProjectItem({super.key, required this.projectModel});
+  final ProjectModel projectModel;
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+       width: MediaQuery.of(context).size.width * 0.28,
+      child: CustomCard(
+        cardColor: AppColors.cardColor,
+        borderColor: AppColors.borderPurple,
+        child: Column(
+          spacing: 4,
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            AspectRatio(
+              aspectRatio: 1.3,
+              child: ClipRRect(
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(16),
+                  topRight: Radius.circular(16),
+                ),
+                child: Image(
+                  image: AssetImage(projectModel.image),
+                  fit: BoxFit.fill,
+                ),
+              ),
+            ),
+            ProjectInfo(
+              title: projectModel.title,
+              descreption: projectModel.descreption,
+              tool1: projectModel.tool1,
+              tool2: projectModel.tool2,
+              tool3: projectModel.tool3,
+            ),
+           // Spacer(),
+            ProjectSectionFooter(
+              onTapGit: projectModel.onTapGit,
+              onTapDemo: projectModel.onTapDemo,
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+
+
+
+/**
+ * import 'package:flutter/material.dart';
+import 'package:my_portfolio/core/theme/app_colors.dart';
+import 'package:my_portfolio/core/widgets/custome_ratio_card.dart';
+import 'package:my_portfolio/modules/home/data/models/project_model.dart';
+import 'package:my_portfolio/modules/home/presentation/screens/widgets/projects_section/project_info.dart';
+import 'package:my_portfolio/modules/home/presentation/screens/widgets/projects_section/project_section_footer.dart';
+
+class ProjectItem extends StatelessWidget {
+  const ProjectItem({super.key, required this.projectModel});
+  final ProjectModel projectModel;
+  @override
+  Widget build(BuildContext context) {
+    final bool isMobile = MediaQuery.of(context).size.width < 600;
+    return SizedBox(
+       width: MediaQuery.of(context).size.width * 0.28,
+      child: CustomRatioCard(
+        aspectRatio: isMobile? 0.6: 288/619,
+        cardColor: AppColors.cardColor,
+        borderColor: AppColors.borderPurple,
+        borderRadius: 16,
+        child: Column(
+          spacing: 4,
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            AspectRatio(
+              aspectRatio: 1.3,
+              child: ClipRRect(
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(16),
+                  topRight: Radius.circular(16),
+                ),
+                child: Image(
+                  image: AssetImage(projectModel.image),
+                  fit: BoxFit.fill,
+                ),
+              ),
+            ),
+            ProjectInfo(
+              title: projectModel.title,
+              descreption: projectModel.descreption,
+              tool1: projectModel.tool1,
+              tool2: projectModel.tool2,
+              tool3: projectModel.tool3,
+            ),
+            Spacer(),
+            ProjectSectionFooter(
+              onTapGit: projectModel.onTapGit,
+              onTapDemo: projectModel.onTapDemo,
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+ */
