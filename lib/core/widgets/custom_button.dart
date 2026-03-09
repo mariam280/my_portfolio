@@ -7,13 +7,16 @@ class CustomButon extends StatelessWidget {
     required this.text,
     this.buttonColor,
     this.textColor,
-    this.icon, this.borderColor,
+    this.icon,
+    this.borderColor,
+    this.image,
   });
   final VoidCallback? onTap;
   final String text;
   final Color? buttonColor, textColor;
   final IconData? icon;
   final BoxBorder? borderColor;
+  final String? image;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -25,21 +28,25 @@ class CustomButon extends StatelessWidget {
           borderRadius: BorderRadius.circular(16),
           border: borderColor ?? Border.all(color: Colors.grey.shade300),
         ),
-        height: 56,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          spacing: 8,
-          children: [
-            Text(
-              text,
-              style: TextStyle(
-                color: textColor,
-                fontSize: 14,
-                fontWeight: FontWeight.bold,
+        height: 58,
+        child: Center(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisSize: MainAxisSize.min,
+            spacing: 4,
+            children: [
+              if (image != null) Image.asset(image!, fit: BoxFit.contain),
+              Text(
+                text,
+                style: TextStyle(
+                  color: textColor,
+                  fontSize: 14,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
-            ),
-            Icon(icon, color: textColor, size: 16),
-          ],
+              Icon(icon, color: textColor, size: 16),
+            ],
+          ),
         ),
       ),
     );

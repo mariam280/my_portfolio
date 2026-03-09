@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:my_portfolio/core/constants/app_images.dart';
 import 'package:my_portfolio/core/theme/app_colors.dart';
 import 'package:my_portfolio/core/theme/app_styles.dart';
 import 'package:my_portfolio/core/widgets/custom_button.dart';
@@ -46,7 +47,7 @@ class HeroSectionBody extends StatelessWidget {
               child: CustomButon(
                 text: " Contact Me ",
                 textColor: AppColors.kWhite,
-                icon: Icons.email_outlined,
+                image: Assets.imagesMailIcon,
                 borderColor: Border.all(color: AppColors.purple),
               ),
             ),
@@ -57,7 +58,7 @@ class HeroSectionBody extends StatelessWidget {
           child: CustomButon(
             text: " Resume ",
             textColor: AppColors.kWhite,
-            icon: Icons.file_download_outlined,
+            image: Assets.imagesDownloadIcon,
             borderColor: Border.all(color: AppColors.pink),
           ),
         ),

@@ -1,4 +1,5 @@
 import 'package:flutter/widgets.dart';
+import 'package:my_portfolio/modules/home/presentation/screens/widgets/contact_section/contact_section.dart';
 import 'package:my_portfolio/modules/home/presentation/screens/widgets/hero_section/hero_section.dart';
 import 'package:my_portfolio/modules/home/presentation/screens/widgets/skills_section/skills_section.dart';
 
@@ -18,6 +19,7 @@ class TabletLayout extends StatelessWidget {
             HeroSection(),
             AboutSection(),
             SkillsSection(),
+            ContactSection(),
           ],
         ),
       ),
