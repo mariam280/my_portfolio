@@ -3,6 +3,7 @@ import 'package:my_portfolio/core/constants/app_images.dart';
 import 'package:my_portfolio/core/theme/app_colors.dart';
 import 'package:my_portfolio/core/widgets/custom_button.dart';
 import 'package:my_portfolio/core/widgets/custom_gradient_button.dart';
+import 'package:my_portfolio/core/widgets/hover_button_wrapper.dart';
 
 class ProjectSectionFooter extends StatelessWidget {
   const ProjectSectionFooter({super.key, this.onTapGit, this.onTapDemo});
@@ -30,23 +31,32 @@ class ProjectSectionFooter extends StatelessWidget {
             children: [
               SizedBox(
                 width: screenWidth > 600 ? screenWidth * 0.4 : screenWidth,
-                child: CustomButon(
-                  height: 40,
-                  onTap: onTapGit,
-                  text: "GitHub",
-                  textColor: AppColors.kWhite,
-                  image: Assets.imagesGithubIcon,
-                  borderColor: Border.all(color: AppColors.purple),
+                child: HoverButtonWrapper(
+                   glow: AppColors.borderPurple.withValues(alpha: 0.5),
+                         borderColor: AppColors.purple,
+                         scaleAfter: 1.02,
+                  child: CustomButon(
+                    height: 40,
+                    onTap: onTapGit,
+                    text: "GitHub",
+                    textColor: AppColors.kWhite,
+                    image: Assets.imagesGithubIcon,
+                    borderColor: Border.all(color: AppColors.borderPurple),
+                  ),
                 ),
               ),
               SizedBox(
                 width: screenWidth > 600 ? screenWidth * 0.4 : screenWidth,
-                child: CustomGradientButton(
-                  height: 40,
-                  onTap: onTapDemo,
-                  text: 'Live Demo',
-                  textColor: AppColors.kWhite,
-                  image: Assets.imagesExternalLinkIcon,
+                child: HoverButtonWrapper(
+                  glow: AppColors.purple.withValues(alpha: 0.4),
+                      scaleAfter: 1.02,
+                  child: CustomGradientButton(
+                    height: 40,
+                    onTap: onTapDemo,
+                    text: 'Live Demo',
+                    textColor: AppColors.kWhite,
+                    image: Assets.imagesExternalLinkIcon,
+                  ),
                 ),
               ),
             ],

@@ -1,8 +1,9 @@
-import 'package:flutter/material.dart'; 
+import 'package:flutter/material.dart';
 import 'package:my_portfolio/core/constants/app_images.dart';
 import 'package:my_portfolio/core/theme/app_colors.dart';
 import 'package:my_portfolio/core/widgets/custom_button.dart';
 import 'package:my_portfolio/core/widgets/custom_gradient_button.dart';
+import 'package:my_portfolio/core/widgets/hover_button_wrapper.dart';
 
 class ActionButtons extends StatelessWidget {
   const ActionButtons({super.key});
@@ -14,61 +15,88 @@ class ActionButtons extends StatelessWidget {
       return Row(
         spacing: 12,
         children: [
-          Expanded(  
-            child: CustomGradientButton(
-              text: "Email Me",
-              textColor: AppColors.kWhite,
-              image: Assets.imagesMailIcon,
+          Expanded(
+            child: HoverButtonWrapper(
+              glow: AppColors.purple.withValues(alpha: 0.4),
+              scaleAfter: 1.02,
+              child: CustomGradientButton(
+                text: "Email Me",
+                textColor: AppColors.kWhite,
+                image: Assets.imagesMailIcon,
+              ),
             ),
           ),
           Expanded(
-            child: CustomButon(
-              text: 'GitHub',
-              textColor: AppColors.kWhite,
-              image: Assets.imagesGithubIcon,
-              borderColor: Border.all(color: AppColors.purple),
+            child: HoverButtonWrapper(
+              glow: AppColors.borderPurple.withValues(alpha: 0.5),
+              borderColor: AppColors.purple,
+              scaleAfter: 1.02,
+              child: CustomButon(
+                text: 'GitHub',
+                textColor: AppColors.kWhite,
+                image: Assets.imagesGithubIcon,
+                borderColor: Border.all(color: AppColors.borderPurple),
+              ),
             ),
           ),
           Expanded(
-            child: CustomButon(
-              text: "LinkedIn",
-              textColor: AppColors.kWhite,
-              image: Assets.imagesLinkedinIcon,
-              borderColor: Border.all(color: AppColors.pink),
+            child: HoverButtonWrapper(
+              glow: AppColors.borderPink.withValues(alpha: 0.5),
+              borderColor: AppColors.pink,
+              scaleAfter: 1.02,
+              child: CustomButon(
+                text: "LinkedIn",
+                textColor: AppColors.kWhite,
+                image: Assets.imagesLinkedinIcon,
+                borderColor: Border.all(color: AppColors.borderPink),
+              ),
             ),
           ),
         ],
       );
-    } 
-    else {
+    } else {
       return Column(
-        mainAxisSize: MainAxisSize.min,  
+        mainAxisSize: MainAxisSize.min,
         spacing: 12,
         children: [
-          SizedBox(  
+          SizedBox(
             width: screenWidth * 0.42,
-            child: CustomGradientButton(
-              text: "Email Me",
-              textColor: AppColors.kWhite,
-              image: Assets.imagesMailIcon,
+            child: HoverButtonWrapper(
+              glow: AppColors.purple.withValues(alpha: 0.4),
+              scaleAfter: 1.02,
+              child: CustomGradientButton(
+                text: "Email Me",
+                textColor: AppColors.kWhite,
+                image: Assets.imagesMailIcon,
+              ),
             ),
           ),
           SizedBox(
             width: screenWidth * 0.38,
-            child: CustomButon(
-              text: 'GitHub',
-              textColor: AppColors.kWhite,
-              image: Assets.imagesGithubIcon,
-              borderColor: Border.all(color: AppColors.purple),
+            child: HoverButtonWrapper(
+              glow: AppColors.borderPurple.withValues(alpha: 0.5),
+              borderColor: AppColors.purple,
+              scaleAfter: 1.02,
+              child: CustomButon(
+                text: 'GitHub',
+                textColor: AppColors.kWhite,
+                image: Assets.imagesGithubIcon,
+                borderColor: Border.all(color: AppColors.borderPurple),
+              ),
             ),
           ),
           SizedBox(
             width: screenWidth * 0.42,
-            child: CustomButon(
-              text: "LinkedIn",
-              textColor: AppColors.kWhite,
-              image: Assets.imagesLinkedinIcon,
-              borderColor: Border.all(color: AppColors.pink),
+            child: HoverButtonWrapper(
+              glow: AppColors.borderPink.withValues(alpha: 0.5),
+              borderColor: AppColors.pink,
+              scaleAfter: 1.02,
+              child: CustomButon(
+                text: "LinkedIn",
+                textColor: AppColors.kWhite,
+                image: Assets.imagesLinkedinIcon,
+                borderColor: Border.all(color: AppColors.borderPink),
+              ),
             ),
           ),
         ],

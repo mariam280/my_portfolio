@@ -4,6 +4,7 @@ import 'package:my_portfolio/core/theme/app_colors.dart';
 import 'package:my_portfolio/core/theme/app_styles.dart';
 import 'package:my_portfolio/core/widgets/custom_button.dart';
 import 'package:my_portfolio/core/widgets/custom_gradient_button.dart';
+import 'package:my_portfolio/core/widgets/hover_button_wrapper.dart';
 
 import 'name_with_span.dart';
 
@@ -35,28 +36,42 @@ class HeroSectionBody extends StatelessWidget {
                 children: [
                   SizedBox(
                     width: 180,
-                    child: CustomGradientButton(
-                      text: ' View Projects ',
-                      textColor: AppColors.kWhite,
-                      icon: Icons.arrow_forward,
+                    child: HoverButtonWrapper(
+                      glow: AppColors.purple.withValues(alpha: 0.4),
+                      scaleAfter: 1.02,
+                      child: CustomGradientButton(
+                        text: ' View Projects ',
+                        textColor: AppColors.kWhite,
+                        icon: Icons.arrow_forward,
+                      ),
                     ),
                   ),
                   SizedBox(
                     width: 170,
-                    child: CustomButon(
-                      text: " Contact Me ",
-                      textColor: AppColors.kWhite,
-                      image: Assets.imagesMailIcon,
-                      borderColor: Border.all(color: AppColors.purple),
+                    child: HoverButtonWrapper(
+                      glow: AppColors.borderPurple.withValues(alpha: 0.5),
+                         borderColor: AppColors.purple,
+                         scaleAfter: 1.02,
+                      child: CustomButon(
+                        text: " Contact Me ",
+                        textColor: AppColors.kWhite,
+                        image: Assets.imagesMailIcon,
+                        borderColor: Border.all(color: AppColors.borderPurple),
+                      ),
                     ),
                   ),
                   SizedBox(
                     width: 150,
-                    child: CustomButon(
-                      text: " Resume ",
-                      textColor: AppColors.kWhite,
-                      image: Assets.imagesDownloadIcon,
-                      borderColor: Border.all(color: AppColors.pink),
+                    child: HoverButtonWrapper(
+                     glow: AppColors.borderPink.withValues(alpha: 0.5),
+                      borderColor: AppColors.pink,
+                      scaleAfter: 1.02,
+                      child: CustomButon(
+                        text: " Resume ",
+                        textColor: AppColors.kWhite,
+                        image: Assets.imagesDownloadIcon,
+                        borderColor: Border.all(color: AppColors.borderPink),
+                      ),
                     ),
                   ),
                 ],
@@ -70,29 +85,43 @@ class HeroSectionBody extends StatelessWidget {
                     spacing: 12,
                     children: [
                       Expanded(
-                        child: CustomGradientButton(
-                          text: ' View Projects ',
-                          textColor: AppColors.kWhite,
-                          icon: Icons.arrow_forward,
+                        child: HoverButtonWrapper(
+                          glow: AppColors.purple.withValues(alpha: 0.6),
+                          scaleAfter: 1.02,
+                          child: CustomGradientButton(
+                            text: ' View Projects ',
+                            textColor: AppColors.kWhite,
+                            icon: Icons.arrow_forward,
+                          ),
                         ),
                       ),
                       Expanded(
-                        child: CustomButon(
-                          text: " Contact Me ",
-                          textColor: AppColors.kWhite,
-                          image: Assets.imagesMailIcon,
-                          borderColor: Border.all(color: AppColors.purple),
+                        child: HoverButtonWrapper(
+                          glow: AppColors.borderPurple.withValues(alpha: 0.5),
+                         borderColor: AppColors.purple,
+                         scaleAfter: 1.02,
+                          child: CustomButon(
+                            text: " Contact Me ",
+                            textColor: AppColors.kWhite,
+                            image: Assets.imagesMailIcon,
+                            borderColor: Border.all(color: AppColors.borderPurple),
+                          ),
                         ),
                       ),
                     ],
                   ),
                   SizedBox(
-                    width: 147, // modify this
-                    child: CustomButon(
-                      text: " Resume ",
-                      textColor: AppColors.kWhite,
-                      image: Assets.imagesDownloadIcon,
-                      borderColor: Border.all(color: AppColors.pink),
+                    width: 147, 
+                    child: HoverButtonWrapper(
+                      glow: AppColors.borderPink.withValues(alpha: 0.5),
+                      borderColor: AppColors.pink,
+                      scaleAfter: 1.02,
+                      child: CustomButon(
+                        text: " Resume ",
+                        textColor: AppColors.kWhite,
+                        image: Assets.imagesDownloadIcon,
+                        borderColor: Border.all(color: AppColors.borderPink),
+                      ),
                     ),
                   ),
                 ],
