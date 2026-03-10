@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/core/theme/app_colors.dart';
-import 'package:my_portfolio/core/widgets/custome_ratio_card.dart';
+import 'package:my_portfolio/core/widgets/custom_card.dart';
 import 'package:my_portfolio/modules/home/presentation/screens/widgets/contact_section/contact_cta.dart';
 import 'action_buttons.dart';
 
@@ -9,20 +9,20 @@ class ContactSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomRatioCard(
-      aspectRatio: 896 / 419,
+    final size = MediaQuery.of(context).size.width * 0.1;
+    return CustomCard(
       borderColor: AppColors.borderPurple,
       elevation: 0,
       cardColor: AppColors.cardColor,
       child: Center(
-        child: Column(
-          spacing: 25,
-          mainAxisSize: MainAxisSize.min,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            ContactCta(),
-            ActionButtons(),
-          ],
+        child: Padding(
+          padding: EdgeInsets.all(size),
+          child: Column(
+            spacing: 25,
+            mainAxisSize: MainAxisSize.min,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [ContactCta(), ActionButtons()],
+          ),
         ),
       ),
     );

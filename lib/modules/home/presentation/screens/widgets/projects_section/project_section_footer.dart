@@ -10,46 +10,28 @@ class ProjectSectionFooter extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final bool isMobile = MediaQuery.of(context).size.width < 700;
+    final screenWidth = MediaQuery.of(context).size.width;
     return Padding(
-      padding: const EdgeInsets.only(left: 16.0, right: 16, bottom: 12),
+      padding: const EdgeInsets.only(left: 16, right: 16, bottom: 16),
       child: Column(
-        spacing: 16,
+         mainAxisSize: MainAxisSize.min,
+        spacing: 12,
         children: [
-           Divider(
+          Divider(
             color: AppColors.borderPurple,
             thickness: 0.4,
             indent: 30,
             endIndent: 30,
           ),
-         isMobile?
-         Wrap(
-            spacing: 10,
-            runSpacing: 8,
-            children: [
-              CustomButon(
-                height: 41,
-                onTap: onTapGit,
-                text: "GitHub",
-                textColor: AppColors.kWhite,
-                image: Assets.imagesGithubIcon,
-                borderColor: Border.all(color: AppColors.purple),
-              ),
-              CustomGradientButton(
-                height: 41,
-                onTap: onTapDemo,
-                text: 'Live Demo',
-                textColor: AppColors.kWhite,
-                image: Assets.imagesExternalLinkIcon,
-              ),
-            ],
-          )
-          : Row(
+          Wrap(
             spacing: 8,
+            runSpacing: 8,
+            alignment: WrapAlignment.center,
             children: [
-              Flexible(
+              SizedBox(
+                width: screenWidth > 600 ? screenWidth * 0.4 : screenWidth,
                 child: CustomButon(
-                  height: 41,
+                  height: 40,
                   onTap: onTapGit,
                   text: "GitHub",
                   textColor: AppColors.kWhite,
@@ -57,9 +39,10 @@ class ProjectSectionFooter extends StatelessWidget {
                   borderColor: Border.all(color: AppColors.purple),
                 ),
               ),
-              Flexible(
+              SizedBox(
+                width: screenWidth > 600 ? screenWidth * 0.4 : screenWidth,
                 child: CustomGradientButton(
-                  height: 41,
+                  height: 40,
                   onTap: onTapDemo,
                   text: 'Live Demo',
                   textColor: AppColors.kWhite,
@@ -71,5 +54,66 @@ class ProjectSectionFooter extends StatelessWidget {
         ],
       ),
     );
+
+    /*    Padding(
+      padding: const EdgeInsets.only(left: 16, right: 16, bottom: 16),
+      child: Column(
+        spacing: 12,
+        children: [
+          Divider(
+            color: AppColors.borderPurple,
+            thickness: 0.4,
+            indent: 30,
+            endIndent: 30,
+          ),
+          isMobile
+              ? Wrap(
+                  spacing: 8,
+                  runSpacing: 8,
+                  children: [
+                    CustomButon(
+                      height: 40,
+                      onTap: onTapGit,
+                      text: "GitHub",
+                      textColor: AppColors.kWhite,
+                      image: Assets.imagesGithubIcon,
+                      borderColor: Border.all(color: AppColors.purple),
+                    ),
+                    CustomGradientButton(
+                      height: 40,
+                      onTap: onTapDemo,
+                      text: 'Live Demo',
+                      textColor: AppColors.kWhite,
+                      image: Assets.imagesExternalLinkIcon,
+                    ),
+                  ],
+                )
+              : Row(
+                  spacing: 4,
+                  children: [
+                    Flexible(
+                      child: CustomButon(
+                        height: 40,
+                        onTap: onTapGit,
+                        text: "GitHub",
+                        textColor: AppColors.kWhite,
+                        image: Assets.imagesGithubIcon,
+                        borderColor: Border.all(color: AppColors.purple),
+                      ),
+                    ),
+                    Flexible(
+                      child: CustomGradientButton(
+                        height: 40,
+                        onTap: onTapDemo,
+                        text: 'Live Demo',
+                        textColor: AppColors.kWhite,
+                        image: Assets.imagesExternalLinkIcon,
+                      ),
+                    ),
+                  ],
+                ),
+        ],
+      ),
+    );*/
   }
 }

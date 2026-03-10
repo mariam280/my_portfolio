@@ -32,20 +32,23 @@ class CustomGradientButton extends StatelessWidget {
           borderRadius: BorderRadius.circular(14),
         ),
         height: height ?? 56,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          spacing: 8,
-          children: [
-            if (image != null) Image.asset(image!, fit: BoxFit.contain),
-            FittedBox(
-              fit: BoxFit.scaleDown,
-              child: Text(
-                text,
-                style:  AppStyles.styleMedium16White(context).copyWith(fontSize: 14)
+        child: Center(
+          child: Row(
+             mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisSize: MainAxisSize.min,
+            spacing: 2,
+            children: [
+              if (image != null) Image.asset(image!, fit: BoxFit.contain),
+              FittedBox(
+                fit: BoxFit.scaleDown,
+                child: Text(
+                  text,
+                  style: AppStyles.styleMedium16White(context).copyWith(fontSize: 14)
+                ),
               ),
-            ),
-            Icon(icon, color: textColor, size: 16),
-          ],
+              Icon(icon, color: textColor, size: 16),
+            ],
+          ),
         ),
       ),
     );

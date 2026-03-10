@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:my_portfolio/modules/home/presentation/screens/widgets/contact_section/contact_section.dart';
+import 'package:my_portfolio/modules/home/presentation/screens/widgets/hero_section/custom_app_bar.dart';
 import 'package:my_portfolio/modules/home/presentation/screens/widgets/hero_section/hero_section.dart';
 import 'package:my_portfolio/modules/home/presentation/screens/widgets/skills_section/skills_section.dart';
 import 'about_section/about_section.dart';
@@ -12,21 +13,28 @@ class TabletLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-        child: Column(
-          spacing: 30,
-          children: [
-            HeroSection(),
-            AboutSection(),
-            SkillsSection(),
-            ProjectSection(),
-            ContactSection(),
-            FooterSection(),
-          ],
+    return Stack(
+      children: [
+        Positioned.fill(
+          child: SingleChildScrollView(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+              child: Column(
+                spacing: 30,
+                children: [
+                  HeroSection(),
+                  AboutSection(),
+                  SkillsSection(),
+                  ProjectSection(),
+                  ContactSection(),
+                  FooterSection(),
+                ],
+              ),
+            ),
+          ),
         ),
-      ),
+        Positioned(top: 0, left: 0, right: 0, child: CustomAppBar()),
+      ],
     );
   }
 }

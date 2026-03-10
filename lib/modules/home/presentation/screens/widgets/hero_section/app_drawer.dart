@@ -21,15 +21,19 @@ class AppDrawer extends StatelessWidget {
               ),
             ),
             ListTile(
+              onTap: () {},
               title: Text('About'),
             ),
             ListTile(
+              onTap: () {},
               title: Text('Skills'),
             ),
             ListTile(
+              onTap: () {},
               title: Text('Projects'),
             ),
             ListTile(
+              onTap: () {},
               title: Text('Contact'),
             ),
           ],

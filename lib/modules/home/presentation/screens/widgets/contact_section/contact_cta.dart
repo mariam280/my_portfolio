@@ -9,6 +9,7 @@ class ContactCta extends StatelessWidget {
     return Column(
       spacing: 20,
       crossAxisAlignment: CrossAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         RichText(
           textAlign: TextAlign.center,
@@ -24,13 +25,13 @@ class ContactCta extends StatelessWidget {
                   context,
                 ).copyWith(fontSize: 48),
               ),
+              TextSpan(
+               text: "\n\nWhether you have a project in mind or just want to say hi, feel free to reach out. I'm always open to new opportunities!",
+              style: AppStyles.styleRegular18(context),
+              )
             ],
           ),
         ),
-         Text(
-            "Whether you have a project in mind or just want to say hi, feel\nfree to reach out. I'm always open to new opportunities!",
-            style: AppStyles.styleRegular18(context),
-          ),
       ],
     );
   }

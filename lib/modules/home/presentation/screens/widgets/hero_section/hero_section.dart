@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:my_portfolio/core/constants/app_images.dart';
 import 'package:my_portfolio/core/theme/app_colors.dart';
 import 'package:my_portfolio/core/theme/app_styles.dart';
-import 'package:my_portfolio/modules/home/presentation/screens/widgets/hero_section/custom_app_bar.dart';
+import 'package:my_portfolio/core/widgets/size.dart';
 import 'package:my_portfolio/modules/home/presentation/screens/widgets/hero_section/div.dart';
 import 'hero_section_body.dart';
 
@@ -11,12 +11,13 @@ class HeroSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final bool isMobile = MediaQuery.of(context).size.width < 600;
     return Column(
       spacing: 26,
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        CustomAppBar(),
+        CustomSize(h: 72),
         Div(
           backgorundColor: AppColors.opacityPurple,
           borderColor: AppColors.borderPurple,
@@ -29,10 +30,10 @@ class HeroSection extends StatelessWidget {
           spacing: 20,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Expanded(
-              child: HeroSectionBody(),
-            ),
-            Expanded(child: Image.asset(Assets.imagesAvatar)),
+            Expanded(child: HeroSectionBody()),
+            isMobile
+                ? SizedBox.shrink()
+                : Expanded(child: Image.asset(Assets.imagesAvatar)),
           ],
         ),
       ],

@@ -10,8 +10,11 @@ class ProjectItem extends StatelessWidget {
   final ProjectModel projectModel;
   @override
   Widget build(BuildContext context) {
+    final bool isMobile = MediaQuery.of(context).size.width < 600;
     return SizedBox(
-       width: MediaQuery.of(context).size.width * 0.28,
+      width: isMobile
+          ? double.infinity
+          : MediaQuery.of(context).size.width * 0.28,
       child: CustomCard(
         cardColor: AppColors.cardColor,
         borderColor: AppColors.borderPurple,
@@ -40,7 +43,6 @@ class ProjectItem extends StatelessWidget {
               tool2: projectModel.tool2,
               tool3: projectModel.tool3,
             ),
-           // Spacer(),
             ProjectSectionFooter(
               onTapGit: projectModel.onTapGit,
               onTapDemo: projectModel.onTapDemo,

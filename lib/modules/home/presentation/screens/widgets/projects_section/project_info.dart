@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/core/theme/app_colors.dart';
 import 'package:my_portfolio/core/theme/app_styles.dart';
+import 'package:my_portfolio/core/widgets/size.dart';
 import 'package:my_portfolio/modules/home/presentation/screens/widgets/hero_section/div.dart';
 
 class ProjectInfo extends StatelessWidget {
@@ -16,7 +17,7 @@ class ProjectInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 16, right: 16, top: 16),
+      padding: const EdgeInsets.only(left: 16, right: 16, top: 20),
       child: Column(
         spacing: 12,
         mainAxisAlignment: MainAxisAlignment.start,
@@ -64,6 +65,7 @@ class ProjectInfo extends StatelessWidget {
               ),
             ],
           ),
+          CustomSize(h:16),
         ],
       ),
     );

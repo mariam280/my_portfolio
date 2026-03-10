@@ -14,7 +14,7 @@ class ProjectSection extends StatelessWidget {
       spacing: 20,
       children: [
         SectionName(sectionName: "Featured Projects"),
-       isMobile? Wrap(
+       isMobile? Column(
           spacing: 8,
           children: [
             ProjectItem(
