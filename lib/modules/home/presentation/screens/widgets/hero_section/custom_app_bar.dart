@@ -2,7 +2,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/core/constants/app_images.dart';
 import 'package:my_portfolio/core/theme/app_colors.dart';
-import 'package:my_portfolio/core/theme/app_styles.dart';
+import 'nav_bar_item.dart';
 
 class CustomAppBar extends StatelessWidget {
   CustomAppBar({super.key});
@@ -35,21 +35,17 @@ class CustomAppBar extends StatelessWidget {
                   radius: 50,
                 ),
               ),
-              Spacer(),
-              Wrap(
-                children: categories
-                    .map(
-                      (category) => Padding(
-                        padding: const EdgeInsets.only(right: 16),
-                        child: Text(
-                          category,
-                          style: AppStyles.styleRegular18(
-                            context,
-                          ).copyWith(fontSize: 16),
-                        ),
-                      ),
-                    )
-                    .toList(),
+             Spacer(),
+              Padding(
+                padding: const EdgeInsets.only(right: 25.0),
+                child: Wrap(
+                  spacing: 30,
+                  children: categories
+                      .map(
+                        (category) => NavBarItem(text: category),
+                      )
+                      .toList(),
+                ),
               ),
             ],
           ),
