@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/core/theme/app_styles.dart';
-
+import 'package:flutter_animate/flutter_animate.dart';
 class ContactCta extends StatelessWidget {
   const ContactCta({super.key});
 
@@ -31,7 +31,9 @@ class ContactCta extends StatelessWidget {
               )
             ],
           ),
-        ),
+        ).animate()
+    .fade(duration: 400.ms)
+    .slideY(begin: 0.2, duration: 400.ms),
       ],
     );
   }

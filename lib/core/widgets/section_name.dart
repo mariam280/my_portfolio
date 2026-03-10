@@ -1,6 +1,7 @@
 import 'package:flutter/widgets.dart';
 import 'package:my_portfolio/core/theme/app_colors.dart';
 import 'package:my_portfolio/core/theme/app_styles.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 
 class SectionName extends StatelessWidget {
   const SectionName({super.key, required this.sectionName});
@@ -13,7 +14,9 @@ class SectionName extends StatelessWidget {
         Text(
           sectionName,
           style: AppStyles.styleBold72Gradient(context).copyWith(fontSize: 48),
-        ),
+        ).animate()
+    .fade(duration: 400.ms)
+    .slideY(begin: 0.2, duration: 400.ms),
         Container(
           width: 80,
           height: 4,

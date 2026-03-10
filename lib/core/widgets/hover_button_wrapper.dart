@@ -31,7 +31,7 @@ class _HoverButtonWrapperState extends State<HoverButtonWrapper> {
         duration: const Duration(milliseconds: 200),
         child: AnimatedContainer(
           duration: const Duration(milliseconds: 200),
-          curve: Curves.bounceInOut,
+          curve: Curves.easeInOut,
           decoration: BoxDecoration(
             boxShadow: isHover
                 ? [ BoxShadow(

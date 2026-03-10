@@ -5,6 +5,7 @@ import 'package:my_portfolio/core/theme/app_styles.dart';
 import 'package:my_portfolio/core/widgets/size.dart';
 import 'package:my_portfolio/modules/home/presentation/screens/widgets/hero_section/div.dart';
 import 'hero_section_body.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 
 class HeroSection extends StatelessWidget {
   const HeroSection({super.key});
@@ -25,7 +26,9 @@ class HeroSection extends StatelessWidget {
           textStyle: AppStyles.styleBold72Gradient(
             context,
           ).copyWith(fontWeight: FontWeight.w500, fontSize: 14),
-        ),
+        ).animate()
+    .fade(duration: 400.ms)
+    .slideY(begin: 0.2, duration: 400.ms),
         Row(
           spacing: 20,
           crossAxisAlignment: CrossAxisAlignment.center,

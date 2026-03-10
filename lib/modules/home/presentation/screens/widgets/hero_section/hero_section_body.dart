@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/core/constants/app_images.dart';
+import 'package:my_portfolio/core/constants/const_var.dart';
+import 'package:my_portfolio/core/function/open_url.dart';
 import 'package:my_portfolio/core/theme/app_colors.dart';
 import 'package:my_portfolio/core/theme/app_styles.dart';
 import 'package:my_portfolio/core/widgets/custom_button.dart';
@@ -43,6 +45,9 @@ class HeroSectionBody extends StatelessWidget {
                         text: ' View Projects ',
                         textColor: AppColors.kWhite,
                         icon: Icons.arrow_forward,
+                        onTap: () {
+                          openUrl(gitHubLink);
+                        },
                       ),
                     ),
                   ),
@@ -50,20 +55,23 @@ class HeroSectionBody extends StatelessWidget {
                     width: 170,
                     child: HoverButtonWrapper(
                       glow: AppColors.borderPurple.withValues(alpha: 0.5),
-                         borderColor: AppColors.purple,
-                         scaleAfter: 1.02,
+                      borderColor: AppColors.purple,
+                      scaleAfter: 1.02,
                       child: CustomButon(
                         text: " Contact Me ",
                         textColor: AppColors.kWhite,
                         image: Assets.imagesMailIcon,
                         borderColor: Border.all(color: AppColors.borderPurple),
+                        onTap: () {
+                          openUrl(myEmail);
+                        },
                       ),
                     ),
                   ),
                   SizedBox(
                     width: 150,
                     child: HoverButtonWrapper(
-                     glow: AppColors.borderPink.withValues(alpha: 0.5),
+                      glow: AppColors.borderPink.withValues(alpha: 0.5),
                       borderColor: AppColors.pink,
                       scaleAfter: 1.02,
                       child: CustomButon(
@@ -71,6 +79,9 @@ class HeroSectionBody extends StatelessWidget {
                         textColor: AppColors.kWhite,
                         image: Assets.imagesDownloadIcon,
                         borderColor: Border.all(color: AppColors.borderPink),
+                        onTap: () {
+                          openUrl(myCV);
+                        },
                       ),
                     ),
                   ),
@@ -92,26 +103,34 @@ class HeroSectionBody extends StatelessWidget {
                             text: ' View Projects ',
                             textColor: AppColors.kWhite,
                             icon: Icons.arrow_forward,
+                            onTap: () {
+                              openUrl(gitHubLink);
+                            },
                           ),
                         ),
                       ),
                       Expanded(
                         child: HoverButtonWrapper(
                           glow: AppColors.borderPurple.withValues(alpha: 0.5),
-                         borderColor: AppColors.purple,
-                         scaleAfter: 1.02,
+                          borderColor: AppColors.purple,
+                          scaleAfter: 1.02,
                           child: CustomButon(
                             text: " Contact Me ",
                             textColor: AppColors.kWhite,
                             image: Assets.imagesMailIcon,
-                            borderColor: Border.all(color: AppColors.borderPurple),
+                            onTap: () {
+                              openUrl(myEmail);
+                            },
+                            borderColor: Border.all(
+                              color: AppColors.borderPurple,
+                            ),
                           ),
                         ),
                       ),
                     ],
                   ),
                   SizedBox(
-                    width: 147, 
+                    width: 147,
                     child: HoverButtonWrapper(
                       glow: AppColors.borderPink.withValues(alpha: 0.5),
                       borderColor: AppColors.pink,
@@ -120,6 +139,9 @@ class HeroSectionBody extends StatelessWidget {
                         text: " Resume ",
                         textColor: AppColors.kWhite,
                         image: Assets.imagesDownloadIcon,
+                        onTap: () {
+                          openUrl(myCV);
+                        },
                         borderColor: Border.all(color: AppColors.borderPink),
                       ),
                     ),

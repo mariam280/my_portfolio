@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/core/constants/app_images.dart';
+import 'package:my_portfolio/core/constants/const_var.dart';
+import 'package:my_portfolio/core/function/open_url.dart';
 import 'package:my_portfolio/core/theme/app_colors.dart';
 import 'package:my_portfolio/core/widgets/custom_button.dart';
 import 'package:my_portfolio/core/widgets/custom_gradient_button.dart';
@@ -23,6 +25,9 @@ class ActionButtons extends StatelessWidget {
                 text: "Email Me",
                 textColor: AppColors.kWhite,
                 image: Assets.imagesMailIcon,
+                onTap: () {
+                  openUrl(myEmail);
+                },
               ),
             ),
           ),
@@ -35,6 +40,9 @@ class ActionButtons extends StatelessWidget {
                 text: 'GitHub',
                 textColor: AppColors.kWhite,
                 image: Assets.imagesGithubIcon,
+                onTap: () {
+                  openUrl(gitHubLink);
+                },
                 borderColor: Border.all(color: AppColors.borderPurple),
               ),
             ),
@@ -48,6 +56,9 @@ class ActionButtons extends StatelessWidget {
                 text: "LinkedIn",
                 textColor: AppColors.kWhite,
                 image: Assets.imagesLinkedinIcon,
+                onTap: () {
+                  openUrl(linkdenLink);
+                },
                 borderColor: Border.all(color: AppColors.borderPink),
               ),
             ),
