@@ -14,6 +14,7 @@ class SkillsSection extends StatelessWidget {
       SectionName(sectionName: "Skills & Technologies"),
       Wrap(
         spacing: 16,
+        runSpacing: 8,
         children: [
           SkillsItem(image: Assets.imagesFlutterSkill, text: "Flutter"),
           SkillsItem(image: Assets.imagesDartSkill, text: "Dart"),

@@ -10,13 +10,15 @@ class SectionName extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       spacing: 16,
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        Text(
-          sectionName,
-          style: AppStyles.styleBold72Gradient(context).copyWith(fontSize: 48),
-        ).animate()
-    .fade(duration: 400.ms)
-    .slideY(begin: 0.2, duration: 400.ms),
+        FittedBox(
+          child: Text(
+            sectionName,
+            style: AppStyles.styleBold72Gradient(context).copyWith(fontSize: 48),
+          ).animate().fade(duration: 400.ms).slideY(begin: 0.2, duration: 400.ms),
+        ),
         Container(
           width: 80,
           height: 4,

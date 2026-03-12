@@ -41,6 +41,7 @@
 import 'package:my_portfolio/core/theme/app_colors.dart';
 import 'package:my_portfolio/core/theme/app_styles.dart';
 import 'package:my_portfolio/core/widgets/custome_ratio_card.dart';
+import 'package:my_portfolio/core/widgets/hover_button_wrapper.dart';
 
 class SkillsItem extends StatelessWidget {
   const SkillsItem({super.key, required this.image, required this.text});
@@ -51,8 +52,9 @@ class SkillsItem extends StatelessWidget {
     return SizedBox(
        width: 170,
        height: 141,
-      child: Padding(
-        padding: const EdgeInsets.only(bottom: 16.0),
+      child: HoverButtonWrapper(
+        glow: AppColors.backgroundColor.withValues(alpha: 0.4),
+        scaleAfter: 1.05,
         child: CustomRatioCard(
           aspectRatio:isMobile? 1: 1.6,
           elevation: 0,
