@@ -23,7 +23,7 @@ class _HoverButtonWrapperState extends State<HoverButtonWrapper> {
 
   @override
   Widget build(BuildContext context) {
-    return MouseRegion(    
+    return MouseRegion(
       onEnter: (_) => setState(() => isHover = true),
       onExit: (_) => setState(() => isHover = false),
       child: AnimatedScale(
@@ -34,15 +34,21 @@ class _HoverButtonWrapperState extends State<HoverButtonWrapper> {
           curve: Curves.easeInOut,
           decoration: BoxDecoration(
             boxShadow: isHover
-                ? [ BoxShadow(
+                ? [
+                    BoxShadow(
                       color: widget.glow,
-                      blurRadius: 20,
-                      spreadRadius: 1,
-                    )]
+                      blurRadius: 25,
+                      spreadRadius: 2,
+                    ),
+                  ]
                 : [],
             shape: BoxShape.rectangle,
             borderRadius: BorderRadius.circular(16),
-            border: Border.all(color:isHover? widget.borderColor ?? Colors.transparent : Colors.transparent),
+            border: Border.all(
+              color: isHover
+                  ? widget.borderColor ?? Colors.transparent
+                  : Colors.transparent,
+            ),
           ),
           child: widget.child,
         ),

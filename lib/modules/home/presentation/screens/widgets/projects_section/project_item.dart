@@ -5,6 +5,8 @@ import 'package:my_portfolio/modules/home/data/models/project_model.dart';
 import 'package:my_portfolio/modules/home/presentation/screens/widgets/projects_section/project_info.dart';
 import 'package:my_portfolio/modules/home/presentation/screens/widgets/projects_section/project_section_footer.dart';
 
+import 'hover_zooming_image.dart';
+
 class ProjectItem extends StatelessWidget {
   const ProjectItem({super.key, required this.projectModel});
   final ProjectModel projectModel;
@@ -25,16 +27,7 @@ class ProjectItem extends StatelessWidget {
           children: [
             AspectRatio(
               aspectRatio: 1.3,
-              child: ClipRRect(
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(16),
-                  topRight: Radius.circular(16),
-                ),
-                child: Image(
-                  image: AssetImage(projectModel.image),
-                  fit: BoxFit.fill,
-                ),
-              ),
+              child: HoverZoomImage(image: projectModel.image),
             ),
             ProjectInfo(
               title: projectModel.title,
