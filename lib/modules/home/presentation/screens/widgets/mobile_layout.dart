@@ -33,7 +33,22 @@ class MobileLayout extends StatelessWidget {
           ),
         ),
 
-        Positioned(top: 0, left: 0, right: 0, child: GlassDrawer()),
+        Positioned(
+          top: 0,
+          left: 0,
+          right: 0,
+          child: TweenAnimationBuilder(
+            duration: Duration(milliseconds: 600),
+            tween: Tween(begin: -80.0, end: 0.0),
+            builder: (context, value, child) {
+              return Transform.translate(
+                offset: Offset(0, value),
+                child: child,
+              );
+            },
+            child: GlassDrawer(),
+          ),
+        ),
       ],
     );
   }

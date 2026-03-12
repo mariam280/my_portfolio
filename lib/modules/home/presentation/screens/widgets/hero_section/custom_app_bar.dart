@@ -35,16 +35,28 @@ class CustomAppBar extends StatelessWidget {
                   radius: 50,
                 ),
               ),
-             Spacer(),
+              Spacer(),
               Padding(
                 padding: const EdgeInsets.only(right: 25.0),
                 child: Wrap(
                   spacing: 30,
-                  children: categories
-                      .map(
-                        (category) => NavBarItem(text: category),
-                      )
-                      .toList(),
+                  children: List.generate(
+                    categories.length,
+                    (index) => TweenAnimationBuilder(
+                      duration: Duration(milliseconds: 400 + (index * 100)),
+                      tween: Tween(begin: 20.0, end: 0.0),
+                      builder: (context, value, child) {
+                        return Transform.translate(
+                          offset: Offset(0, value),
+                          child: Opacity(
+                            opacity: value == 0 ? 1 : 0,
+                            child: child,
+                          ),
+                        );
+                      },
+                      child: NavBarItem(text: categories[index]),
+                    ),
+                  ),
                 ),
               ),
             ],

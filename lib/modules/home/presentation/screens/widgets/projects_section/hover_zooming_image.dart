@@ -28,7 +28,7 @@ class _HoverZoomImageState extends State<HoverZoomImage> {
           curve: Curves.easeOut,
           child: Image.asset(
             widget.image,
-            fit: BoxFit.cover,
+            fit: BoxFit.fill,
           ),
         ),
       ),

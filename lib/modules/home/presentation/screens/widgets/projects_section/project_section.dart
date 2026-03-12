@@ -22,9 +22,9 @@ class ProjectSection extends StatelessWidget {
                 children: [
                   ProjectItem(
                     projectModel: ProjectModel(
-                      tool1: " Firebase ",
-                      tool2: " REST API ",
-                      tool3: "State Management",
+                      tool1: "State Management",
+                      tool2: "Firebase",
+                      tool3: "REST API",  
                       image: Assets.imagesPro1,
                       title: "Newsify",
                       descreption:
@@ -39,9 +39,9 @@ class ProjectSection extends StatelessWidget {
                   ),
                   ProjectItem(
                     projectModel: ProjectModel(
-                      tool1: " Hive ",
-                      tool2: " Gemini Api ",
-                      tool3: "State Management",
+                      tool1: "State Management",
+                      tool2: " Hive ",
+                      tool3: " Gemini Api ",
                       image: Assets.imagesPro2,
                       title: "AI Chat",
                       descreption:
@@ -56,9 +56,9 @@ class ProjectSection extends StatelessWidget {
                   ),
                   ProjectItem(
                     projectModel: ProjectModel(
-                      tool1: " Flutter ",
+                      tool1: "State Management",
                       tool2: " Hive ",
-                      tool3: "State Management",
+                      tool3: " Flutter ",
                       image: Assets.imagesPro3,
                       title: "MTodo",
                       descreption:
@@ -78,9 +78,9 @@ class ProjectSection extends StatelessWidget {
                 children: [
                   ProjectItem(
                     projectModel: ProjectModel(
-                      tool1: " Firebase ",
-                      tool2: " REST API ",
-                      tool3: "State Management",
+                      tool1: "State Management",
+                      tool2: "Firebase",
+                      tool3: "REST API",
                       image: Assets.imagesPro1,
                       title: "Newsify",
                       descreption:
@@ -95,9 +95,9 @@ class ProjectSection extends StatelessWidget {
                   ),
                   ProjectItem(
                     projectModel: ProjectModel(
-                      tool1: " Hive ",
-                      tool2: " Gemini Api ",
-                      tool3: "State Management",
+                      tool1: "State Management",
+                      tool2: " Hive ",
+                      tool3: " Gemini Api ",
                       image: Assets.imagesPro2,
                       title: "AI Chat",
                       descreption:
@@ -112,9 +112,9 @@ class ProjectSection extends StatelessWidget {
                   ),
                   ProjectItem(
                     projectModel: ProjectModel(
-                      tool1: " Flutter ",
+                      tool1: "State Management",
                       tool2: " Hive ",
-                      tool3: "State Management",
+                      tool3: " Flutter ",                      
                       image: Assets.imagesPro3,
                       title: "MTodo",
                       descreption:

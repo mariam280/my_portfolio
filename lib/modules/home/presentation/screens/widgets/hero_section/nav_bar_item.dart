@@ -31,9 +31,10 @@ class _NavBarItemState extends State<NavBarItem> {
         duration: const Duration(milliseconds: 200),
         curve: Curves.easeInOut,
         style: AppStyles.styleRegular18(context).copyWith(
-          fontSize:isHover? 18 : 16,
-          color: isHover ? AppColors.kWhite : AppColors.kGrey),
-       child: Text(widget.text),
+          fontSize: isHover ? 18 : 16,
+          color: isHover ? AppColors.kWhite : AppColors.kGrey,
+        ),
+        child: Text(widget.text),
       ),
     );
   }
