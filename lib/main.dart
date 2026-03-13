@@ -4,6 +4,6 @@ import 'package:my_portfolio/my_portfolio.dart';
 
 void main() {
   runApp(DevicePreview(
-    enabled: true,
+    enabled: false,
     builder: (context)=> const MyPortfolio()));
 }

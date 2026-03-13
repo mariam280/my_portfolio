@@ -5,7 +5,8 @@ import 'package:my_portfolio/core/theme/app_colors.dart';
 import 'nav_bar_item.dart';
 
 class CustomAppBar extends StatelessWidget {
-  CustomAppBar({super.key});
+  CustomAppBar({super.key,required this.onTap});
+  final Function(int index) onTap;
   final List<String> categories = ["About", "Skill", "projects", "Contact"];
   @override
   Widget build(BuildContext context) {
@@ -54,7 +55,10 @@ class CustomAppBar extends StatelessWidget {
                           ),
                         );
                       },
-                      child: NavBarItem(text: categories[index]),
+                      child: NavBarItem(
+                        text: categories[index],
+                        onTap: () => onTap(index),
+                      ),
                     ),
                   ),
                 ),

@@ -8,7 +8,6 @@ import 'drawer_item_hover.dart';
 
 class AppDrawer extends StatelessWidget {
   const AppDrawer({super.key});
-
   @override
   Widget build(BuildContext context) {
     return BackdropFilter(

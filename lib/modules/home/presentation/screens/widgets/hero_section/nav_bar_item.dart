@@ -3,8 +3,8 @@ import 'package:my_portfolio/core/theme/app_colors.dart';
 import 'package:my_portfolio/core/theme/app_styles.dart';
 
 class NavBarItem extends StatefulWidget {
-  const NavBarItem({super.key, required this.text});
-
+  const NavBarItem({super.key, required this.text, this.onTap});
+  final void Function()? onTap;
   final String text;
 
   @override
@@ -34,7 +34,7 @@ class _NavBarItemState extends State<NavBarItem> {
           fontSize: isHover ? 18 : 16,
           color: isHover ? AppColors.kWhite : AppColors.kGrey,
         ),
-        child: Text(widget.text),
+        child: GestureDetector(onTap: widget.onTap, child: Text(widget.text)),
       ),
     );
   }
