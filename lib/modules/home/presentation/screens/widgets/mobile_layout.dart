@@ -20,6 +20,8 @@ class MobileLayout extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
               child: Column(
                 spacing: 30,
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   HeroSection(),
                   AboutSection(),

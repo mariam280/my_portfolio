@@ -18,13 +18,15 @@ class ProjectSection extends StatelessWidget {
         SectionName(sectionName: "Featured Projects"),
         isMobile
             ? Column(
-                spacing: 8,
+                spacing: 12,
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   ProjectItem(
                     projectModel: ProjectModel(
                       tool1: "State Management",
                       tool2: "Firebase",
-                      tool3: "REST API",  
+                      tool3: "REST API",
                       image: Assets.imagesPro1,
                       title: "Newsify",
                       descreption:
@@ -74,7 +76,9 @@ class ProjectSection extends StatelessWidget {
                 ],
               )
             : Row(
-                spacing: 8,
+                spacing: 12,
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   ProjectItem(
                     projectModel: ProjectModel(
@@ -114,7 +118,7 @@ class ProjectSection extends StatelessWidget {
                     projectModel: ProjectModel(
                       tool1: "State Management",
                       tool2: " Hive ",
-                      tool3: " Flutter ",                      
+                      tool3: " Flutter ",
                       image: Assets.imagesPro3,
                       title: "MTodo",
                       descreption:

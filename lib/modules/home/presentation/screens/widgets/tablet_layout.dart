@@ -32,6 +32,8 @@ class _TabletLayoutState extends State<TabletLayout> {
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
               child: Column(
                 spacing: 30,
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   HeroSection(key: heroKey),
                   AboutSection(key: aboutKey),

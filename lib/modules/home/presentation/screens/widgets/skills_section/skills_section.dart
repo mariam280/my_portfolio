@@ -22,7 +22,13 @@ class SkillsSection extends StatelessWidget {
           SkillsItem(image: Assets.imagesApiSkill, text: "REST APIs"),
           SkillsItem(image: Assets.imagesBlocSkill, text: "Cubit / BLoC"),
           SkillsItem(image: Assets.imagesSqlSkill, text: "SQL"),
-          SkillsItem(image: Assets.imagesGitSkill, text: "Git"),
+          SkillsItem(image: Assets.imagesFirebaseSkill, text: "Supabase"),
+          SkillsItem(image: Assets.imagesSqlSkill, text: "local Storage"),
+          SkillsItem(image: Assets.imagesBlocSkill, text: "Provider"),
+          SkillsItem(image: Assets.imagesGitSkill, text: "Git / GitHub"),
+          SkillsItem(image: Assets.imagesApiSkill, text: "Postman"),
+          SkillsItem(image: Assets.imagesFlutterSkill, text: "VS code"),
+         
       ],),
     ],);
   }
