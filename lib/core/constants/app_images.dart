@@ -14,9 +14,9 @@ class Assets {
   /// assets/images/aql_skill_svg.svg
   static const String imagesAqlSkillSvg = "assets/images/aql_skill_svg.svg";
 
-  /// Assets for imagesAvatar
-  /// assets/images/avatar.png
-  static const String imagesAvatar = "assets/images/avatar.png";
+  /// Assets for imagesAvatarwithoutback1
+  /// assets/images/avatarwithoutback1.png
+  static const String imagesAvatarwithoutback1 = "assets/images/avatarwithoutback1.png";
 
   /// Assets for imagesBlocSkill
   /// assets/images/bloc_skill.png

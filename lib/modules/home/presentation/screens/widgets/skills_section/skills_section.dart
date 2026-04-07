@@ -28,7 +28,7 @@ class SkillsSection extends StatelessWidget {
           SkillsItem(image: Assets.imagesGitSkill, text: "Git / GitHub"),
           SkillsItem(image: Assets.imagesApiSkill, text: "Postman"),
           SkillsItem(image: Assets.imagesFlutterSkill, text: "VS code"),
-         
+          SkillsItem(image: Assets.imagesApiSkill, text: "CI/CD"),
       ],),
     ],);
   }

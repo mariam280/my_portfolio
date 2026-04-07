@@ -5,7 +5,7 @@ import 'package:my_portfolio/core/theme/app_colors.dart';
 import 'nav_bar_item.dart';
 
 class CustomAppBar extends StatelessWidget {
-  CustomAppBar({super.key,required this.onTap});
+  CustomAppBar({super.key, required this.onTap});
   final Function(int index) onTap;
   final List<String> categories = ["About", "Skill", "projects", "Contact"];
   @override
@@ -31,9 +31,14 @@ class CustomAppBar extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: CircleAvatar(
-                  backgroundImage: AssetImage(Assets.imagesAvatar),
                   backgroundColor: AppColors.backgroundColor,
                   radius: 50,
+                  child: CircleAvatar(
+                    backgroundColor: AppColors.backgroundColor,
+                    backgroundImage: AssetImage(
+                      Assets.imagesAvatarwithoutback1,
+                    ),
+                  ),
                 ),
               ),
               Spacer(),

@@ -26,17 +26,21 @@ class HeroSection extends StatelessWidget {
           textStyle: AppStyles.styleBold72Gradient(
             context,
           ).copyWith(fontWeight: FontWeight.w500, fontSize: 14),
-        ).animate()
-    .fade(duration: 400.ms)
-    .slideY(begin: 0.2, duration: 400.ms),
+        ).animate().fade(duration: 400.ms).slideY(begin: 0.2, duration: 400.ms),
         Row(
           spacing: 20,
           crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Expanded(child: HeroSectionBody()),
             isMobile
                 ? SizedBox.shrink()
-                : Expanded(child: Image.asset(Assets.imagesAvatar)),
+                : Flexible(
+                    child: Image.asset(
+                      Assets.imagesAvatarwithoutback1,
+                      fit: BoxFit.contain,
+                    ),
+                  ),
           ],
         ),
       ],

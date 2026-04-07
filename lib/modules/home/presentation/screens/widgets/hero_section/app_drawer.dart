@@ -18,7 +18,7 @@ class AppDrawer extends StatelessWidget {
           padding: EdgeInsets.zero,
           children: [
             DrawerHeader(
-              child: Image.asset(Assets.imagesAvatar, fit: BoxFit.contain),
+              child: Image.asset(Assets.imagesAvatarwithoutback1, fit: BoxFit.contain),
             ),
             DrawerItemHover(text: "About", onTap: () {}),
             DrawerItemHover(text: "Skills", onTap: () {}),

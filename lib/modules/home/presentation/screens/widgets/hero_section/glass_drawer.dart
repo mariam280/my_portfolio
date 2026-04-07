@@ -32,9 +32,14 @@ class GlassDrawer extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.all(6.0),
                   child: CircleAvatar(
-                    backgroundImage: AssetImage(Assets.imagesAvatar),
                     backgroundColor: AppColors.backgroundColor,
-                    radius: 40,
+                    radius: 50,
+                    child: CircleAvatar(
+                      backgroundColor: AppColors.backgroundColor,
+                      backgroundImage: AssetImage(
+                        Assets.imagesAvatarwithoutback1,
+                      ),
+                    ),
                   ),
                 ),
                 IconButton(
