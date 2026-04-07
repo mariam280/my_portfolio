@@ -10,18 +10,18 @@ import 'contact_section/footer_section.dart';
 import 'projects_section/project_section.dart';
 
 class TabletLayout extends StatefulWidget {
-  const TabletLayout({super.key});
+  const TabletLayout({super.key, required this.heroKey, required this.aboutKey, required this.skillKey, required this.projectKey, required this.contactKey});
+  final GlobalKey heroKey;
+  final GlobalKey aboutKey;
+  final GlobalKey skillKey;
+  final GlobalKey projectKey;
+  final GlobalKey contactKey;
 
   @override
   State<TabletLayout> createState() => _TabletLayoutState();
 }
 
 class _TabletLayoutState extends State<TabletLayout> {
-  final heroKey = GlobalKey();
-  final aboutKey = GlobalKey();
-  final skillKey = GlobalKey();
-  final projectKey = GlobalKey();
-  final contactKey = GlobalKey();
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -35,11 +35,11 @@ class _TabletLayoutState extends State<TabletLayout> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  HeroSection(key: heroKey),
-                  AboutSection(key: aboutKey),
-                  SkillsSection(key: skillKey),
-                  ProjectSection(key: projectKey),
-                  ContactSection(key: contactKey),
+                  HeroSection(key:  widget.heroKey),
+                  AboutSection(key: widget.aboutKey),
+                  SkillsSection(key: widget.skillKey),
+                  ProjectSection(key: widget.projectKey),
+                  ContactSection(key: widget.contactKey),
                   FooterSection(),
                 ],
               ),
@@ -61,10 +61,10 @@ class _TabletLayoutState extends State<TabletLayout> {
             },
             child: CustomAppBar(
               onTap: (index) {
-                if (index == 0) scrollToSection(aboutKey);
-                if (index == 1) scrollToSection(skillKey);
-                if (index == 2) scrollToSection(projectKey);
-                if (index == 3) scrollToSection(contactKey);
+                if (index == 0) scrollToSection(widget.aboutKey);
+                if (index == 1) scrollToSection(widget.skillKey);
+                if (index == 2) scrollToSection(widget.projectKey);
+                if (index == 3) scrollToSection(widget.contactKey);
               },
             ),
           ),

@@ -6,19 +6,55 @@ import 'package:my_portfolio/modules/home/presentation/screens/widgets/hero_sect
 import 'widgets/mobile_layout.dart';
 import 'widgets/tablet_layout.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  final heroKey = GlobalKey();
+  final aboutKey = GlobalKey();
+  final skillKey = GlobalKey();
+  final projectKey = GlobalKey();
+  final contactKey = GlobalKey();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.backgroundColor,
-      endDrawer: MediaQuery.of(context).size.width < 1024 ? AppDrawer() : null,
+      endDrawer: MediaQuery.of(context).size.width < 1024
+          ? AppDrawer(
+              aboutKey: aboutKey,
+              skillKey: skillKey,
+              projectKey: projectKey,
+              contactKey: contactKey,
+            )
+          : null,
       body: SafeArea(
         child: AdaptiveLayout(
-          mobileLayout: (context) => const MobileLayout(),
-          tabletLayout: (context) => const TabletLayout(),
-          desktopLayout: (context) => const TabletLayout(),
+          mobileLayout: (context) => MobileLayout(
+            heroKey: heroKey,
+            aboutKey: aboutKey,
+            skillKey: skillKey,
+            projectKey: projectKey,
+            contactKey: contactKey,
+          ),
+          tabletLayout: (context) => TabletLayout(
+            heroKey: heroKey,
+            aboutKey: aboutKey,
+            skillKey: skillKey,
+            projectKey: projectKey,
+            contactKey: contactKey,
+          ),
+          desktopLayout: (context) => TabletLayout(
+            heroKey: heroKey,
+            aboutKey: aboutKey,
+            skillKey: skillKey,
+            projectKey: projectKey,
+            contactKey: contactKey,
+          ),
         ),
       ),
     );

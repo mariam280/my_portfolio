@@ -7,9 +7,19 @@ import 'package:my_portfolio/modules/home/presentation/screens/widgets/hero_sect
 import 'package:my_portfolio/modules/home/presentation/screens/widgets/projects_section/project_section.dart';
 import 'package:my_portfolio/modules/home/presentation/screens/widgets/skills_section/skills_section.dart';
 
-class MobileLayout extends StatelessWidget {
-  const MobileLayout({super.key});
+class MobileLayout extends StatefulWidget {
+  const MobileLayout({super.key, required this.heroKey, required this.aboutKey, required this.skillKey, required this.projectKey, required this.contactKey});
+  final GlobalKey heroKey;
+  final GlobalKey aboutKey;
+  final GlobalKey skillKey;
+  final GlobalKey projectKey;
+  final GlobalKey contactKey;
 
+  @override
+  State<MobileLayout> createState() => _MobileLayoutState();
+}
+
+class _MobileLayoutState extends State<MobileLayout> {
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -23,11 +33,11 @@ class MobileLayout extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  HeroSection(),
-                  AboutSection(),
-                  SkillsSection(),
-                  ProjectSection(),
-                  ContactSection(),
+                  HeroSection(key:  widget.heroKey),
+                  AboutSection(key:  widget.aboutKey),
+                  SkillsSection(key:  widget.skillKey),
+                  ProjectSection(key: widget.projectKey),
+                  ContactSection(key:  widget.contactKey),
                   FooterSection(),
                 ],
               ),

@@ -25,14 +25,18 @@ class _DrawerItemHoverState extends State<DrawerItemHover> {
           isHover = false;
         });
       },
-      child: ListTile(onTap: () {}, title: AnimatedDefaultTextStyle(
-         duration: const Duration(milliseconds: 200),
-      curve: Curves.easeInOut,
-      style: AppStyles.styleRegular18(context).copyWith(
-        fontSize: isHover ? 18 : 16,
-        color: isHover ? AppColors.kWhite : AppColors.kGrey,
+      child: ListTile(
+        onTap: widget.onTap,
+        title: AnimatedDefaultTextStyle(
+          duration: const Duration(milliseconds: 200),
+          curve: Curves.easeInOut,
+          style: AppStyles.styleRegular18(context).copyWith(
+            fontSize: isHover ? 18 : 16,
+            color: isHover ? AppColors.kWhite : AppColors.kGrey,
+          ),
+          child: Text(widget.text),
+        ),
       ),
-        child: Text(widget.text))),
     );
   }
 }
